@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Közös project</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="kategóriák.html">
+</head>
+<body class="body">
+    <div class="popup-overlay">
+        <div class="popup">
+            <h1>Canon nyári akció</h1>
+            <p>Kattints a bezáráshoz!</p>
+        </div>
+    </div>
+    <header class="header">
+        <nav class="navbar">
+            <img  id="logoImg" src="képek/LOGO-01.jpg" alt="logo">
+            <h1 id="photoMarket">Photo Market</h1>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <footer class="footer">
+        <div class="a_side"><img src="képek/LOGO-01.jpg" alt="logo"></div>
+        <div class="b_side">
+            <div id="b_sideLeft">
+                <p>Kapcsolat:</p>
+                <a href="tel:+36701234567">Telefonáljon</a>
+                <a href="mailto:#">Írjon nekünk</a>
+                <a href="https://eur-lex.europa.eu/legal-content/HU/TXT/HTML/?uri=LEGISSUM:310401_2">GDPRS</a>
+            </div>
+            <div id="b_sideRight">
+            <button class="open-button" onclick="openForm()">Chat</button>
+                <div class="chat-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <h1>Chat</h1>
+                        <label for="msg"><b>Message</b></label>
+                        <textarea placeholder="Type message.." name="msg" required></textarea>
+                        <button type="submit" class="btn">Send</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

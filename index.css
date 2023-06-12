@@ -1,0 +1,282 @@
+/* popup ablak , sötétítés , stb*/
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+}
+.popup {
+    background-color: #f80101;
+    width: 30%;
+    height: 30%;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+.popup h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.popup p {
+    font-size: 16px;
+}
+.popup-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+/* a tényleges body*/
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* Hamburger menü*/
+.header{
+    border-bottom: 1px solid #E2E8F0;
+    position: sticky;
+    top: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+#logoImg{
+    width: 25%;
+    height: 15%;
+}
+#mutyi{
+    font-size: 4rem;
+    font-family: 'Roboto', sans-serif;
+}
+.hamburger {
+    display: none;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item {
+    margin-left: 5rem;
+}
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #475569;
+}
+.nav-link:hover{
+    color: #482ff7;
+}
+.footer{
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.a_side{
+    display: flex;
+    justify-content: center;
+    width: 15%;
+}
+.a_side img{
+    max-width: 60%;
+    height: 50%;
+}
+.b_side{
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    height: 100%;
+}
+#b_sideLeft{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#b_sideRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    width: 40%;
+}
+
+/* Livechat popup */
+.open-button {
+    background-color: #555555;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    padding-bottom: 30px;
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+  }
+  
+  /* Popup alapértelmezés szerint elrejtve */
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Stílusok hozzáadása a form-hoz */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Teljes szélességű szövegterület */
+  .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* Amikor a szövegterület fókuszba kerül */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Stílus beállítása a küldés gombhoz */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Piros háttérszín a Mégse gombhoz */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Adjon hozzá néhány lebegő effektust a gombokhoz */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+/* Mobilbarát stílus */
+@media only screen and (max-width: 768px) {
+    #photoMarket{
+        font-size: 2rem;
+    }
+    #b_sideLeft{
+        font-size: 0.5rem;
+    }
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .open-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 15px;
+        color: #101010;
+        background-color: chartreuse;
+        position: sticky;
+        bottom: 10%;
+        width: 10%;
+        height: 10%;
+        border-radius: 50%;
+    }
+}
+  
+  /* Tablet méret */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    #photoMarket{
+        font-size: 1.5rem;
+    }
+  }
+  
+  /* Desktop méret */
+  @media only screen and (min-width: 1024px) {
+    #photoMarket{
+        font-size: 2rem;
+    }
+  }
