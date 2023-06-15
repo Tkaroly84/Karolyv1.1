@@ -1,4 +1,4 @@
-/* popup ablak , sötétítés , stb*/
+                                /* popup ablak , sötétítés , stb*/
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -38,7 +38,8 @@
     visibility: visible;
     opacity: 1;
 }
-/* a tényleges body*/
+
+                                /* a tényleges body*/
 body {
     margin: 0;
     padding: 0;
@@ -54,11 +55,12 @@ a {
     text-decoration: none;
 }
 
-/* Hamburger menü*/
+                                /* Header */
 .header{
     border-bottom: 1px solid #E2E8F0;
     position: sticky;
     top: 0;
+    background-color: #ffffff;
 }
 .navbar {
     display: flex;
@@ -69,10 +71,6 @@ a {
 #logoImg{
     width: 25%;
     height: 15%;
-}
-#mutyi{
-    font-size: 4rem;
-    font-family: 'Roboto', sans-serif;
 }
 .hamburger {
     display: none;
@@ -102,11 +100,81 @@ a {
 .nav-link:hover{
     color: #482ff7;
 }
+
+                                /*Slider*/
+.slider{
+    width: 100%;
+    height: 200px;
+    background-color: #475569;
+}
+
+                                /* Kattintható Kategóriák*/
+#category_container{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.category {
+    flex: 0 0 30%;
+    margin-right: 10px;
+  }
+  button{
+    width:70%;
+    height:30px;
+    border-radius:10px;
+  }
+.category_container-button {
+    width: 100%; 
+    height: auto; 
+    margin: 15px;
+  }
+.category1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 300px;
+    background-image: url(képek/kategoriák/fényképezőgépek/r5.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+.category2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 300px;
+    background-image: url(képek/kategoriák/objektívek/35.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.category3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 300px;
+    background-image: url(képek/kategoriák/állványok/dw-manfrotto-546gb-280px.png);
+    background-size: cover;
+    background-position: center;
+}
+.category4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 300px;
+    background-image: url(képek/kategoriák/memoriakártya/sd.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+                                /* Footer */
 .footer{
     width: 100%;
     height: 10%;
-    position: fixed;
-    bottom: 0;
+    position: fixed;/* kiszedni ha megvannak a többiek */
+    bottom: 0;/* kiszedni ha megvannak a többiek */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,7 +209,7 @@ a {
     width: 40%;
 }
 
-/* Livechat popup */
+                                /* Livechat popup */
 .open-button {
     background-color: #555555;
     color: white;
@@ -211,7 +279,7 @@ a {
     opacity: 1;
   }
 
-/* Mobilbarát stílus */
+                                /* Mobilbarát stílus */
 @media only screen and (max-width: 768px) {
     #photoMarket{
         font-size: 2rem;
@@ -221,7 +289,7 @@ a {
     }
     .nav-menu {
         position: fixed;
-        left: -100%;
+        left: 100%;
         top: 5rem;
         flex-direction: column;
         background-color: #fff;
@@ -265,16 +333,31 @@ a {
         height: 10%;
         border-radius: 50%;
     }
+    .footer{
+        display: flex;
+        width: 100%;
+        height: 10%;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #b_sideLeft{
+        width: 80%;
+      }
+      .category {
+        margin:10px;
+        height:100px;
+        flex: 0 0 30%;
+      }
 }
   
-  /* Tablet méret */
+                                /* Tablet méret */
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     #photoMarket{
         font-size: 1.5rem;
     }
   }
   
-  /* Desktop méret */
+                                /* Desktop méret */
   @media only screen and (min-width: 1024px) {
     #photoMarket{
         font-size: 2rem;
