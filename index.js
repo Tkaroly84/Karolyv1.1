@@ -34,3 +34,40 @@ function openForm() {
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
+
+                                                //slider
+
+  var images = document.querySelectorAll('.slider img');
+  var index = 0;
+  var timer;
+
+  function showNextImage() {
+    images[index].style.zIndex = 1; // Elrejtjük az aktuális képet
+    index = (index + 1) % images.length; // Következő index kiszámítása
+    images[index].style.zIndex = 5; // Megjelenítjük a következő képet
+  }
+
+  function startSlideShow() {
+    timer = setInterval(showNextImage, 2000); // Időzített függvényhívás
+  }
+
+  function stopSlideShow() {
+    clearInterval(timer); // Időzítés megszakítása
+  }
+
+  // Az első kép megjelenítése
+  images[index].style.zIndex = 5;
+
+  // Egér belépése a slider területére
+  document.querySelector('.slider').addEventListener('mouseenter', stopSlideShow);
+
+  // Egér kilépése a slider területéről
+  document.querySelector('.slider').addEventListener('mouseleave', startSlideShow);
+
+  // Slide show indítása
+  startSlideShow();
+
+                                                //slider elnavigál
+function sliderfunction(){
+        window.open('https://www.canon.hu/');
+      }

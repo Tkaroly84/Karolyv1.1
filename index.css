@@ -1,4 +1,21 @@
-                                /* popup ablak , sötétítés , stb*/
+                                        /* villogó szöveg*/
+@keyframes flashing {
+    0% {
+      color: red;
+    }
+    50% {
+      color: blue;
+    }
+    100% {
+      color: red;
+    }
+  }
+  
+  #flashing-text {
+    animation: flashing 1s infinite;
+  }
+  
+                                    /* popup ablak , sötétítés , stb*/
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -61,6 +78,7 @@ a {
     position: sticky;
     top: 0;
     background-color: #ffffff;
+    z-index: 999;
 }
 .navbar {
     display: flex;
@@ -102,10 +120,34 @@ a {
 }
 
                                 /*Slider*/
-.slider{
-    width: 100%;
-    height: 200px;
-    background-color: #475569;
+.slider {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden; /* opcionális, ha a tartalom túlmutat a slider méretén */
+}
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#sliderkép1 {
+  z-index: 5;
+}
+#sliderkép2 {
+  z-index: 4;
+}
+#sliderkép3 {
+  z-index: 3;
+}
+#sliderkép4 {
+  z-index: 2;
+}
+#sliderkép5 {
+  z-index: 1;
 }
 
                                 /* Kattintható Kategóriák*/
@@ -119,7 +161,7 @@ a {
     margin-right: 10px;
   }
   button{
-    width:70%;
+    width:80%;
     height:30px;
     border-radius:10px;
   }
@@ -167,6 +209,27 @@ a {
     background-image: url(képek/kategoriák/memoriakártya/sd.jpeg);
     background-size: cover;
     background-position: center;
+}
+                                /* kiemelt */
+.kiemelt{
+    text-align: center;
+}
+.rf100-300{
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+#rf100-300img{
+    width: 200%;
+    height: 400px;
+    background-image: url(képek/kategoriák/objektívek/70-200.jpg);
+    background-size: cover; /* A kép méretének beállítása a div-hez */
+    background-position: center; /* A kép középre igazítása */
+}
+#rf100-300string{
+    width: 50%;
+    height: 400px;
+    background-color: #ffffff;
 }
 
                                 /* Footer */
@@ -332,6 +395,26 @@ a {
         width: 10%;
         height: 10%;
         border-radius: 50%;
+    }
+    .kiemelt{
+        text-align: center;
+    }
+    .rf100-300{
+        display: flex;
+        width: 100%;
+        height: 400px;
+    }
+    #rf100-300img{
+        width: 200%;
+        height: 200px;
+        background-image: url(képek/kategoriák/objektívek/70-200.jpg);
+        background-size: cover; /* A kép méretének beállítása a div-hez */
+        background-position: center; /* A kép középre igazítása */
+    }
+    #rf100-300string{
+        width: 50%;
+        height: 400px;
+        background-color: #ffffff;
     }
     .footer{
         display: flex;
